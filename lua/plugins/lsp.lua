@@ -6,7 +6,7 @@ return {
     config = false,
     init = function()
       -- Disable automatic setup, we are doing it manually
-      vim.g.lsp_zero_extend_cmp = 0
+    vim.g.lsp_zero_extend_cmp = 0
       vim.g.lsp_zero_extend_lspconfig = 0
     end,
   },
@@ -62,8 +62,10 @@ return {
       lsp_zero.on_attach(function(client, bufnr)
         -- see :help lsp-zero-keybindings
         -- to learn the available actions
-        lsp_zero.default_keymaps({buffer = bufnr})
-      end)
+       lsp_zero.default_keymaps({buffer = bufnr})
+        lsp_zero.buffer_autoformat()
+
+    end)
 
       require('mason-lspconfig').setup({
         ensure_installed = {},
