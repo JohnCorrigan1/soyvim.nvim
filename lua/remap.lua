@@ -16,3 +16,8 @@ vim.keymap.set("n", "<leader>wl", "<C-w>l")
 
 -- close window
 vim.keymap.set("n", "<leader>wq", "<C-w>q")
+
+
+--colorschemes
+vim.keymap.set("n", "<leader>csd", ":colorscheme kanagawa-wave")
+vim.keymap.set("n", "<leader>csl", ":colorscheme kanagawa-lotus")
